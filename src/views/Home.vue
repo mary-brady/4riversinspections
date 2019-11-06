@@ -1,16 +1,16 @@
 <template>
-  <div class="container-fluid">
+  <div class="home container-fluid">
     <div class="row justify-content-center">
-      <div class="hero-image col-12">
+      <!-- <div class="hero-image col-12">
         <img src="../assets/Home1.jpeg" alt="home" />
-      </div>
+      </div>-->
     </div>
     <div class="row justify-content-center">
       <div class="col-lg-12">
         <p>Dedicated to serving Idaho home buyers and real estate agents. Our goal is to make the process of home inspection as convenient, thorough, and affordable as possible</p>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <div class="cards row justify-content-center">
       <div class="col-lg-4">
         <div class="card" style="width: 30rem;">
           <div class="card-body">
@@ -114,5 +114,12 @@ export default {
 <style scoped>
 a {
   color: black;
+}
+.cards {
+  background-color: rgb(34, 116, 165);
+  align-items: center;
+}
+.home {
+  max-height: 100vh;
 }
 </style>
