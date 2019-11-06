@@ -1,6 +1,7 @@
 <template>
-  <div class="pricing">
+  <div class="contact">
     <HelloWorld msg="Welcome to Your Vue.js App" />
+    <p>this is a contact page!!!!</p>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "pricing",
+  name: "contact",
   components: {
     HelloWorld
   }
