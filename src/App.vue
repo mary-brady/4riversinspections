@@ -1,57 +1,66 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand pr-3" href="/#/">
-          <strong>4RiversInspections</strong>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarColor01"
-          aria-controls="navbarColor01"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <router-link to="/">Home</router-link>
-            </li>&nbsp; &nbsp;
-            <li class="nav-item">
-              <router-link to="/Pricing">Pricing</router-link>
-            </li>&nbsp; &nbsp;
-            <li class="nav-item">
-              <router-link to="/About">About Us</router-link>
-            </li>&nbsp; &nbsp;
-            <li class="nav-item">
-              <router-link to="/Contact">Contact</router-link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <router-view />
-    </div>
-  </div>
+  <v-app>
+    <!-- Start of Navigation -->
+    <nav>
+      <!-- Start of app toolbar -->
+      <v-toolbar app>
+        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"></v-toolbar-side-icon>
+        <v-toolbar-title class="headline text-uppercase">4RiversInspections</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn flat to="/" exact>Home</v-btn>
+          <v-btn flat to="/about">About</v-btn>
+          <v-btn flat to="/contact">Contact</v-btn>
+          <v-btn flat to="/Pricing">Pricing</v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <!-- End of app toolbar -->
+
+      <!-- Start of mobile side menu -->
+      <v-navigation-drawer app v-model="drawer" right>
+        <!-- Menu title -->
+        <v-toolbar flat>
+          <v-list>
+            <v-list-tile>
+              <v-list-tile-title class="title">Menu</v-list-tile-title>
+            </v-list-tile>
+          </v-list>
+        </v-toolbar>
+        <v-divider></v-divider>
+        <!-- Menu Links -->
+        <v-list>
+          <v-list-tile to="/" exact>
+            <v-list-tile-action>
+              <v-icon>home</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>Home</v-list-tile-content>
+          </v-list-tile>
+          <v-list-tile to="/about">
+            <v-list-tile-action>
+              <v-icon>description</v-icon>
+            </v-list-tile-action>
+            <v-list-tile-content>About</v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+      <!-- End of mobile side menu -->
+    </nav>
+    <!-- End of Navigation -->
+
+    <v-content>
+      <!-- Display view pages here based on route -->
+      <router-view></router-view>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  data() {
+    return {
+      drawer: false // Hide mobile side menu by default
+    };
+  }
 };
 </script>
-
-<style>
-.navbar,
-a {
-  font-weight: bold;
-  color: #ffffff;
-  font-family: "Roboto", sans-serif;
-}
-.navbar-brand {
-  font-size: x-large;
-}
-</style>
