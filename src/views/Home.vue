@@ -1,16 +1,20 @@
 <template>
-  <HelloWorld />
+  <v-container>
+    <v-layout>
+      <h1>Home page</h1>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import HelloWorld from "../components/HelloWorld";
 
 export default {
-  name: 'Home',
+  name: "Home",
 
   components: {
-    HelloWorld,
-  },
+    HelloWorld
+  }
 };
 </script>
 ate>

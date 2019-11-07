@@ -1,8 +1,17 @@
 <template>
-  <div class="contact">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <p>this is a contact page!!!!</p>
-  </div>
+  <v-container>
+    <v-layout>
+      <v-flex xs12>
+        <h1 class="display-1">Contact Page</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+          obcaecati tempora sunt debitis, minima deleniti ex inventore
+          laboriosam at animi praesentium, quaerat corrupti molestiae recusandae
+          corporis necessitatibus vitae, nam saepe?
+        </p>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
@@ -10,7 +19,7 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
-  name: "contact",
+  name: "Contact",
   components: {
     HelloWorld
   }
