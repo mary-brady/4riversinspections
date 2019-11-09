@@ -32,7 +32,7 @@
         </v-card>
       </v-col>
     </v-row>
-    <v-row justify="center">
+    <v-row>
       <v-col cols="12">
         <v-card>
           <v-card-title>
@@ -108,3 +108,31 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+@media only screen and (min-width: 300px) {
+  .container {
+    max-width: 280px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .container {
+    max-width: 560px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .container {
+    max-width: 900px;
+  }
+}
+@media only screen and (min-width: 1264px) {
+  .container {
+    max-width: 1185px;
+  }
+}
+@media only screen and (min-width: 1904px) {
+  .container {
+    max-width: 1785px;
+  }
+}
+</style>
