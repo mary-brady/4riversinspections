@@ -1,7 +1,18 @@
 <template>
   <v-container>
     <v-layout>
-      <h1>Home page</h1>
+      <v-container fluid>
+        <v-row justify="center">
+          <v-col cols="12">
+            <v-img :src="images.logo"></v-img>
+          </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-col cols="12">
+            <p>Inspecting homes as if they were our own, with decades of construction experience and thousands of inspections completed!</p>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-layout>
   </v-container>
 </template>
@@ -27,6 +38,13 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      images: {
+        logo: require("../assets/4RILogo1.jpg")
+      }
+    };
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-navigation-drawer v-model="drawer" app>
-      <v-list dense>
+      <v-list>
         <v-list-item v-for="item in items" :key="item.title" :to="{name:item.link}">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -14,7 +14,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app color="blue-grey" dark>
+    <v-app-bar app color="#51b6fd">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">4RiversInspections</v-toolbar-title>
     </v-app-bar>
@@ -22,7 +22,7 @@
     <v-content>
       <router-view />
     </v-content>
-    <v-footer color="blue-grey" app>
+    <v-footer color="#51b6fd" app>
       <span class="white--text">&copy; 2019</span>
     </v-footer>
   </v-app>
