@@ -15,7 +15,7 @@
         <v-list v-for="cont in content" :key="cont.title">
           <v-row justify="center">
             <v-col cols="12">
-              <v-card shaped :elevation="4">
+              <v-card shaped :elevation="3">
                 <v-card-title>{{cont.title}}</v-card-title>
                 <v-card-text>{{cont.text}}</v-card-text>
               </v-card>
@@ -83,11 +83,5 @@ export default {
 <style>
 a {
   color: black;
-}
-.cards {
-  background-color: rgb(34, 116, 165);
-  align-items: center;
-  height: 30vw;
-  justify-content: space-between;
 }
 </style>
