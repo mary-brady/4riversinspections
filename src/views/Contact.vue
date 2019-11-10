@@ -46,7 +46,7 @@
                 @blue="$v.name.$touch()"
               ></v-text-field>
               <v-text-field
-                v-model="Email"
+                v-model="email"
                 :error-messages="emailErrors"
                 label="Email"
                 required
@@ -54,7 +54,7 @@
                 @blue="$v.email.$touch()"
               ></v-text-field>
               <v-text-field
-                v-model="Phone"
+                v-model="phone"
                 :error-messages="phoneErrors"
                 label="Phone Number"
                 required
@@ -78,6 +78,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
 // import { validationMixin } from "vuelidate";
 const { validationMixin, default: Vuelidate } = require("vuelidate");
 const { required, email, numeric } = require("vuelidate/lib/validators");
+
 export default {
   name: "Contact",
   components: {
