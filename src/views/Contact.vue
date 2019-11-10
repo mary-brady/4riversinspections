@@ -123,7 +123,12 @@ export default {
       this.phone = "";
     },
     submit() {
-      //stuff
+      this.$store.dispatch("sendEmail", {
+        name: this.name,
+        phone: this.phone,
+        email: this.email
+      });
+      clear();
     }
   }
 };
