@@ -23,7 +23,7 @@
       <router-view />
     </v-content>
     <v-footer color="#51b6fd" app>
-      <span class="white--text">&copy; 2019</span>
+      <span class="white--text">&copy; 4RiversTeamInspections 2019</span>
     </v-footer>
   </v-app>
 </template>
