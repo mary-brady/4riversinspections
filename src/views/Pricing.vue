@@ -19,7 +19,7 @@
             <v-divider></v-divider>
             <v-data-iterator :items="pricing" hide-default-footer>
               <v-list v-for="price in pricing" :key="price.ft">
-                <v-row justify="center" no-gutters>
+                <v-row justify="center">
                   <v-col cols="8" align="center">
                     <v-list-item-content>{{price.ft}}</v-list-item-content>
                   </v-col>
