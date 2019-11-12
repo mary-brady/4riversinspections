@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app style="background: white;">
     <v-navigation-drawer v-model="drawer" app>
       <v-list>
         <v-list-item v-for="item in items" :key="item.title" :to="{name:item.link}">

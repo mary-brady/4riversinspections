@@ -1,30 +1,28 @@
 <template>
-  <v-container fluid>
-    <v-layout>
-      <v-container fluid>
+  <v-layout>
+    <v-container fluid>
+      <v-row justify="center">
+        <v-col cols="12">
+          <v-img :src="images.logo"></v-img>
+        </v-col>
+      </v-row>
+      <v-row justify="center">
+        <v-col cols="12">
+          <p>Inspecting homes as if they were our own, with decades of construction experience and thousands of inspections completed!</p>
+        </v-col>
+      </v-row>
+      <v-list v-for="cont in content" :key="cont.title">
         <v-row justify="center">
           <v-col cols="12">
-            <v-img :src="images.logo"></v-img>
+            <v-card shaped :elevation="3">
+              <v-card-title>{{cont.title}}</v-card-title>
+              <v-card-text>{{cont.text}}</v-card-text>
+            </v-card>
           </v-col>
         </v-row>
-        <v-row justify="center">
-          <v-col cols="12">
-            <p>Inspecting homes as if they were our own, with decades of construction experience and thousands of inspections completed!</p>
-          </v-col>
-        </v-row>
-        <v-list v-for="cont in content" :key="cont.title">
-          <v-row justify="center">
-            <v-col cols="12">
-              <v-card shaped :elevation="3">
-                <v-card-title>{{cont.title}}</v-card-title>
-                <v-card-text>{{cont.text}}</v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-list>
-      </v-container>
-    </v-layout>
-  </v-container>
+      </v-list>
+    </v-container>
+  </v-layout>
 </template>
 
 <script>
