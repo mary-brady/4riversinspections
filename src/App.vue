@@ -40,6 +40,9 @@ export default {
         { title: "Contact", icon: "mdi-send", link: "Contact" },
         { title: "About Us", icon: "mdi-account-heart", link: "About" }
       ],
+      images: {
+        logo: require("./assets/4RILogo1.jpg")
+      },
       mini: true
     };
   }
