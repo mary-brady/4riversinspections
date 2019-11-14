@@ -9,32 +9,52 @@
         </v-row>
         <v-row>
           <v-col cols="12">
-            <p>We completely understand the magnitude of a home purchase and all of the questions that come with it. Please give us a call, send an email, or shoot us some snail mail (if you’re still living in the 19th century). You’re family now, so feel free to contact us at any hour of the day or night. We will always be here for you!</p>
+            <p>We completely understand the magnitude of a home purchase and all of the questions that come with it. Please give us a call or send us an email. You’re family now, so feel free to contact us at any hour of the day or night. We will always be here for you!</p>
           </v-col>
         </v-row>
-        <v-row>
-          <v-col cols="2">
-            <i class="fas fa-phone-alt"></i>
-          </v-col>
+        <v-row align="center" no-gutters>
           <v-col cols="6">
-            <h3>CALL US</h3>
+            <h2>
+              <u>CALL US</u>
+            </h2>
           </v-col>
+          <!-- <v-col cols="2">
+            <i class="fas fa-phone-alt" style="font-size: x-large;"></i>
+          </v-col>-->
         </v-row>
         <v-row>
           <v-col cols="12">
-            <a href="tel:208-918-0805">208-918-0805</a>
+            <h4>
+              <a href="tel:208-918-0805">(208) 918-0805</a>
+            </h4>
           </v-col>
         </v-row>
-        <v-row>
-          <v-col cols="12">
-            <h3>EMAIL US</h3>
+        <v-row align="center" no-gutters>
+          <v-col cols="8">
+            <h2>
+              <u>EMAIL US</u>
+            </h2>
             <p>You can email us directly:</p>
-            <a href="mailto:tyra@4riversinspections.com">tyra@4riversinspection.com</a>
-            <br />
-            <a href="mailto:sean@4riversinspections.com">sean@4riversinspection.com</a>
           </v-col>
+          <!-- <v-col cols="2">
+            <i class="far fa-paper-plane" style="font-size: x-large;"></i>
+          </v-col>-->
+          <v-row align="center" justify="center" no-gutters>
+            <v-col cols="12" justify="center">
+              <h5>
+                <a href="mailto:tyra@4riversinspections.com">tyra@4riversinspection.com</a>
+              </h5>
+            </v-col>
+          </v-row>
+          <v-row align="center" justify="center" no-gutters>
+            <v-col cols="12" justify="center">
+              <h5>
+                <a href="mailto:sean@4riversinspections.com">sean@4riversinspection.com</a>
+              </h5>
+            </v-col>
+          </v-row>
         </v-row>
-        <v-row>
+        <!-- <v-row>
           <v-col cols="12">
             <form action>
               <v-text-field
@@ -65,7 +85,7 @@
               <v-btn class="mr-4" @click="clear">Clear Form</v-btn>
             </form>
           </v-col>
-        </v-row>
+        </v-row>-->
       </v-container>
     </v-layout>
   </v-container>
