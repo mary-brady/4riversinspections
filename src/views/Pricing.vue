@@ -2,13 +2,13 @@
   <v-layout>
     <v-container fluid>
       <v-row justify="center">
-        <v-col cols="12">
-          <v-card>
+        <v-col lg="12">
+          <v-card max-width="auto">
             <v-card-title>
               <h3>Home Inspection Pricing</h3>
             </v-card-title>
             <v-divider></v-divider>
-            <v-row>
+            <v-row justify="center">
               <v-col cols="6" align="center">
                 <v-card-subtitle>Square Feet</v-card-subtitle>
               </v-col>
@@ -17,51 +17,47 @@
               </v-col>
             </v-row>
             <v-divider></v-divider>
-            <v-data-iterator :items="pricing" hide-default-footer>
-              <v-list v-for="price in pricing" :key="price.ft">
-                <v-row justify="center">
-                  <v-col cols="8" align="center">
-                    <v-list-item-content>{{price.ft}}</v-list-item-content>
-                  </v-col>
-                  <v-col cols="4" align="center">
-                    <v-list-item-content class="align-end">{{price.price}}</v-list-item-content>
-                  </v-col>
-                </v-row>
-                <v-divider></v-divider>
-              </v-list>
-            </v-data-iterator>
+            <v-list v-for="price in pricing" :key="price.ft">
+              <v-row justify="center">
+                <v-col cols="8">
+                  <v-list-item>{{price.ft}}</v-list-item>
+                </v-col>
+                <v-col cols="4">
+                  <v-list-item>{{price.price}}</v-list-item>
+                </v-col>
+              </v-row>
+              <v-divider></v-divider>
+            </v-list>
           </v-card>
         </v-col>
       </v-row>
-      <v-row>
-        <v-col cols="12">
-          <v-card>
+      <v-row justify="center">
+        <v-col lg="12">
+          <v-card max-width="600">
             <v-card-title>
-              <h4>Additional Services</h4>
+              <h3>Addt. Services</h3>
             </v-card-title>
             <v-divider></v-divider>
-            <v-row>
-              <v-col cols="6">
+            <v-row justify="center">
+              <v-col cols="6" align="center">
                 <v-card-subtitle>Service</v-card-subtitle>
               </v-col>
-              <v-col cols="6">
+              <v-col cols="6" align="center">
                 <v-card-subtitle>Price</v-card-subtitle>
               </v-col>
             </v-row>
             <v-divider></v-divider>
-            <v-data-iterator :items="addService" hide-default-footer>
-              <v-list v-for="service in addService" :key="service.service">
-                <v-row justify="center">
-                  <v-col cols="6">
-                    <v-list-item-content class="text-center">{{service.service}}</v-list-item-content>
-                  </v-col>
-                  <v-col cols="6">
-                    <v-list-item-content>{{service.price}}</v-list-item-content>
-                  </v-col>
-                </v-row>
-                <v-divider></v-divider>
-              </v-list>
-            </v-data-iterator>
+            <v-list v-for="service in addService" :key="service.service">
+              <v-row justify="center">
+                <v-col cols="6">
+                  <v-list-item>{{service.service}}</v-list-item>
+                </v-col>
+                <v-col cols="6">
+                  <v-list-item>{{service.price}}</v-list-item>
+                </v-col>
+              </v-row>
+              <v-divider></v-divider>
+            </v-list>
           </v-card>
         </v-col>
       </v-row>
