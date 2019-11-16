@@ -3,17 +3,17 @@
     <v-container fluid>
       <v-row justify="center">
         <v-col cols="12" align="center">
-          <v-img :src="images.logo" height="500" width="600"></v-img>
+          <v-img :src="images.logo" height="400" width="400"></v-img>
         </v-col>
       </v-row>
-      <v-row justify="center">
-        <v-col cols="12">
+      <v-row class="d-flex justify-center">
+        <v-col cols="12" align="center">
           <p>Inspecting homes as if they were our own, with decades of construction experience and thousands of inspections completed!</p>
         </v-col>
       </v-row>
       <v-list v-for="cont in content" :key="cont.title">
         <v-row justify="center">
-          <v-col cols="12">
+          <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 12 : 6]">
             <v-card shaped :elevation="3">
               <v-card-title>{{cont.title}}</v-card-title>
               <v-card-text>{{cont.text}}</v-card-text>
@@ -43,6 +43,9 @@ ate>
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
+  mounted() {
+    console.log(this.$vuetify.breakpoint);
+  },
   name: "home",
   components: {
     HelloWorld
@@ -75,6 +78,22 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    imageHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "220px";
+        case "sm":
+          return "400px";
+        case "md":
+          return "500px";
+        case "lg":
+          return "600px";
+        case "xl":
+          return "800px";
+      }
+    }
   }
 };
 </script>

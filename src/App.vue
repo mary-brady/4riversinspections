@@ -16,7 +16,7 @@
 
     <v-app-bar app color="#51b6fd">
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="headline black--text text-uppercase">4RiversInspections</v-toolbar-title>
+      <v-toolbar-title class="headline white--text text-uppercase">4RiversInspections</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
@@ -45,6 +45,22 @@ export default {
       },
       mini: true
     };
+  },
+  computed: {
+    imageHeight() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return "220px";
+        case "sm":
+          return "400px";
+        case "md":
+          return "500px";
+        case "lg":
+          return "600px";
+        case "xl":
+          return "800px";
+      }
+    }
   }
 };
 </script>

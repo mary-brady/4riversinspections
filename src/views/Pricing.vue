@@ -2,27 +2,27 @@
   <v-layout>
     <v-container fluid>
       <v-row justify="center">
-        <v-col lg="12">
-          <v-card max-width="auto">
+        <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 12 : 6]">
+          <v-card>
             <v-card-title>
               <h3>Home Inspection Pricing</h3>
             </v-card-title>
             <v-divider></v-divider>
-            <v-row justify="center">
-              <v-col cols="6" align="center">
-                <v-card-subtitle>Square Feet</v-card-subtitle>
+            <v-row>
+              <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 8 : 8]">
+                <v-card-subtitle class="font-weight-black">Square Feet</v-card-subtitle>
               </v-col>
-              <v-col cols="6" align="center">
-                <v-card-subtitle>Price</v-card-subtitle>
+              <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 4 : 4]">
+                <v-card-subtitle class="font-weight-black">Price</v-card-subtitle>
               </v-col>
             </v-row>
             <v-divider></v-divider>
             <v-list v-for="price in pricing" :key="price.ft">
-              <v-row justify="center">
-                <v-col cols="8">
+              <v-row>
+                <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 8 : 8]">
                   <v-list-item>{{price.ft}}</v-list-item>
                 </v-col>
-                <v-col cols="4">
+                <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 4 : 4]">
                   <v-list-item>{{price.price}}</v-list-item>
                 </v-col>
               </v-row>
@@ -32,27 +32,27 @@
         </v-col>
       </v-row>
       <v-row justify="center">
-        <v-col lg="12">
-          <v-card max-width="600">
+        <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 12 : 6]">
+          <v-card>
             <v-card-title>
               <h3>Addt. Services</h3>
             </v-card-title>
             <v-divider></v-divider>
             <v-row justify="center">
-              <v-col cols="6" align="center">
+              <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 6 : 6]" align="center">
                 <v-card-subtitle>Service</v-card-subtitle>
               </v-col>
-              <v-col cols="6" align="center">
+              <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 6 : 6]" align="center">
                 <v-card-subtitle>Price</v-card-subtitle>
               </v-col>
             </v-row>
             <v-divider></v-divider>
             <v-list v-for="service in addService" :key="service.service">
               <v-row justify="center">
-                <v-col cols="6">
+                <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 8 : 8]">
                   <v-list-item>{{service.service}}</v-list-item>
                 </v-col>
-                <v-col cols="6">
+                <v-col :cols="[$vuetify.breakpoint.mdAndDown ? 4 : 4]">
                   <v-list-item>{{service.price}}</v-list-item>
                 </v-col>
               </v-row>
