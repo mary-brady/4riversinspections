@@ -2,6 +2,6 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
-  baseUrl: '/public_html'
+  publicPath: 'home/ibk3yij03n09/public_html'
 
 }
